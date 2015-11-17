@@ -34,13 +34,20 @@ ul{
   text-align: center;
 }
 
-
-a {
+a{
   color: white;
   text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: transparent;
   border-color: #337ab7;
+}
+
+.navigations{
+  color: #333;
 }
