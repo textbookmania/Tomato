@@ -1,3 +1,46 @@
 body {
-  padding-top: 70px;  /* Move body of page below navbar. */
+  padding-top: 0px;  /* Move body of page below navbar. */
+}
+
+.header-image{
+  background-image: url('/images/books.jpg');
+  background-size: cover;
+  height: 200px;
+}
+
+.navbar{
+  border-radius: 0px;
+}
+
+.navbar-inverse{
+  background-color:tomato;
+  border-color: tomato;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+  font-size: 15px;
+}
+
+.well{
+  text-align: center;
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: transparent;
+  border-color: #337ab7;
 }
