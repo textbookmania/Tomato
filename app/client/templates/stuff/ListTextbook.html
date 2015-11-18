@@ -1,0 +1,33 @@
+<template name="ListTextbook">
+  {{#IfLoggedIn}}
+  <div class="well">
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      {{#each textbookList}}
+      <tr>
+        <td><img src="http://images.amazon.com/images/P/{{isbn}}.01._PE20_SCMZZZZZZZ_.jpg"></td>
+        <td>{{title}}</td>
+        <td>{{author}}</td>
+        <td>{{isbn}}</td>
+        <td><a href="{{pathFor 'EditTextbook'}}">Edit</a></td>
+        <td><a class="delete" href="#">Delete</a></td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+
+  </div>
+  {{/IfLoggedIn}}
+</template>
