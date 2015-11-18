@@ -36,12 +36,12 @@ Router.route('/textbooks', {
   name: 'Textbooks'
 });
 
-Router.route('/random1', {
-  name: 'random1'
+Router.route('/buyoffers', {
+  name: 'buyoffers'
 });
 
-Router.route('/random2', {
-  name: 'random2'
+Router.route('/selloffers', {
+  name: 'selloffers'
 });
 
 Router.route('/matches', {
