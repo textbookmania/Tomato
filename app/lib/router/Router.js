@@ -22,11 +22,15 @@ Router.route('/add', {
   name: 'AddTextbook'
 });
 
-
 Router.route('/textbook/:_id', {
   name: 'EditTextbook',
   data: function() { return Textbook.findOne(this.params._id); }
 });
+
 Router.route('/help', {
   name: 'Help'
+});
+
+Router.route('/buyOffers',{
+  name: 'BuyOffers'
 });
