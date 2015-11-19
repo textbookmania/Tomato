@@ -34,3 +34,17 @@ Router.route('/help', {
 Router.route('/buyOffers',{
   name: 'BuyOffers'
 });
+
+Router.route('/sellOffers',{
+  name: 'SellOffers'
+});
+
+Router.route('/matches',{
+  name: 'Matches'
+});
+
+Router.route('/student',{
+  name: 'Students'
+});
+
+
