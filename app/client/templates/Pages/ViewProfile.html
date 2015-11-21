@@ -1,0 +1,43 @@
+<template name="viewProfile">
+
+    <div class="container-fluid">
+        <div class="col-md-4">
+            <div class="well">
+                <div class="row">
+                    <img src="{{ currentUser.profile.profileImage }}" class="img-rounded center-block" height="100px"
+                         width="100px"><br>
+                    <h2 style="font-weight: bold">{{ currentUser.profile.firstName }} {{ currentUser.profile.lastName
+                        }}</h2>
+                    <h2>{{ currentUser.profile.phone }}</h2>
+                    <h2>{{ currentUser.profile.name}}@hawaii.edu</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form class="main form page">
+        <div class="form-group">
+            <label class="control-label" for="profile-image">Profile Image</label>
+            <input type="url" class="form-control" id="profile-image" value="{{ currentUser.profile.profileImage }}"
+                   placeholder="Profile image url">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="first-name">First Name</label>
+            <input type="text" class="form-control" id="first-name" value="{{ currentUser.profile.firstName }}"
+                   placeholder="First name">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="last-name">Last Name</label>
+            <input type="text" class="form-control" id="last-name" value="{{currentUser.profile.lastName }}"
+                   placeholder="Last name">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="phone">Phone Number</label>
+            <input type="text" class="form-control" id="phone" value="{{currentUser.profile.phone }}"
+                   placeholder="(xxx)xxx-xxxx">
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    </form>
+
+
+</template>
