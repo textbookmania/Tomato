@@ -60,10 +60,28 @@ Textbook.attachSchema(new SimpleSchema({
       placeholder: "Author"
     }
   },
+  condition: {
+    label: "Condition",
+    type: String,
+    allowedValues: ['Excellent', 'Good', 'Fair', 'Poor'],
+    optional: false,
+    max: 100,
+    autoform: {
+      group: textbook,
+      placeholder: "Condition",
+      options:[
+        {label: "Excellent", value: "Excellent"},
+        {label: "Good", value: "Good"},
+        {label: "Fair", value: "Fair"},
+        {label: "Poor", value: "Poor"}
+      ]
+    }
+  },
   isbn: {
     label: "ISBN",
     type: String,
     optional: false,
+    min: 10,
     max: 10,
     autoform: {
       group: textbook,
