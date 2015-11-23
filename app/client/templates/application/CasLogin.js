@@ -26,6 +26,9 @@ Template.CasLogin.events({
         console.log(error);
       }
     };
+    //check user
+    //console.log(Meteor.user());
+
     Meteor.loginWithCas(callback);
     return false;
   }
