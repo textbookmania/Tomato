@@ -20,7 +20,10 @@ Accounts.validateNewUser(function (user) {
  Comares user's profile name against settings list of admin users. If they match, user is given admin role.
  */
 Accounts.onLogin(function () {
-  if (Meteor.user().profile.name && _.contains(Meteor.settings.adminUsers, Meteor.user().profile.name)) {
+  var username = Meteor.user().profile.name;
+  if (username && _.contains(Meteor.settings.adminUsers, username)) {
     Roles.addUsersToRoles(Meteor.userId(), 'admin');
   }
+  var email = username.concat("@hawaii.edu");
+  Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.email": email}});
 });
