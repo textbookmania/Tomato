@@ -62,3 +62,13 @@ a{
 .offersHeader{
   text-align: left;
 }
+.alignleft {
+  float: left;
+  text-align: left;
+
+}
+
+.aligncenter {
+  float: left;
+  text-align: center;
+}
