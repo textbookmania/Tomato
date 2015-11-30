@@ -1,71 +1,83 @@
 <template name="Home">
-    <div class="row">
-        <a href="#">
-            <div class="col-md-3">
-                <div class="well">
-                    <div class="navigations">
-                        <h1>Students</h1>
+    <h1> Aloha, Welcome to Text Book Exchange</h1>
 
-                        <p>Create a profile and connect with other students.</p></div>
-                </div>
-            </div>
-        </a>
+    <h2><b>Text Book Exchange</b> is a website where UH ICS students can buy and sell textbooks between students</h2>
 
-        <a href="#">
-            <div class="col-md-3">
-                <div class="well">
-                    <div class="navigations">
-                        <h1>Buy Offers</h1>
-                        <p>Looking for a used book? List it here. We'll help find a seller.</p>
+    <div class="grid">
+        <div class="col-2-3">
+            <div class="row">
+                <a href="{{pathFor 'viewProfile'}}">
+
+                    <div class="col-md-1">
+                        <div class="well well-lg">
+                            <div class="navigations">
+                                <span title="View your profile"> <i class="fa fa-user"></i></span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </a>
+                </a>
 
-        <a href="#">
-            <div class="col-md-3">
-                <div class="well">
-                    <div class="navigations">
-                        <h1>Matches</h1>
-                        <p>We'll scour our database for potential buyers and sellers.</p>
-                    </div>
+                <div class="col-md-1">
                 </div>
+
+                <a href="{{pathFor 'BuyOffers'}}">
+                    <div class="col-md-1">
+                        <div class="well well-lg">
+                            <div class="navigations">
+                                <span title="View Buy Offers"><i class="fa fa-shopping-cart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="col-md-1">
+                </div>
+                <a href="{{pathFor 'Matches'}}">
+                    <div class="col-md-1">
+                        <div class="well well-lg">
+                            <div class="navigations">
+                                <span title="View Matches"><i class="fa fa-users"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="col-md-1">
+                </div>
+                <a href="{{ pathFor 'ListTextbook' }}">
+                    <div class="col-md-1">
+                        <div class="well well-lg">
+                            <div class="navigations">
+                                <span title="View Textbooks"><i class="fa fa-book"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="col-md-1">
+                </div>
+                <a href="{{pathFor 'SellOffers'}}">
+                    <div class="col-md-1">
+                        <div class="well well-lg">
+                            <div class="navigations">
+                                <span title="View Sell Offers"><i class="fa fa-money"></i></span>
+
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="col-md-1">
+                </div>
+                <a href="{{pathFor 'Help'}}">
+                    <div class="col-md-1">
+                        <div class="well well-lg">
+                            <div class="navigations">
+                                <span title="Help"> <i class="fa fa-info-circle"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </a>
+        </div>
     </div>
 
-    <div class="row">
-        <a href="#">
-            <div class="col-md-3">
-                <div class="well">
-                    <div class="navigations">
-                        <h1>Textbooks</h1>
-                        <p>Search our database for the textbook for your courses</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-        <a href="#">
-            <div class="col-md-3">
-                <div class="well">
-                    <div class="navigations">
-                        <h1>Buy Offers</h1>
-                        <p>Looking for a used book? List it here. We'll help find a seller.</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{pathFor 'Help'}}">
-            <div class="col-md-3">
-                <div class="well">
-                    <div class="navigations">
-                        <h1>Help</h1>
-                        <p>Need some assistance?</p>
-                    </div>
-                </div>
-            </div>
-        </a>
+    <div class="col-1-3">
     </div>
 </template>

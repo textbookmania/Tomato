@@ -1,8 +1,20 @@
 <template name="Help">
 
+
+    {{#IfLoggedIn}}
+    <h1>You are logged in</h1>
+    {{/IfLoggedIn}}
+
+    {{#if isInRole 'admin'}}
+
+    <h1> You are admin</h1>
+
+    {{/if}}
+
+
     <div class="jumbotron">
 
-        <h1>This is the Textbook Mania Help Page</h1>
+        <h1>Welcome! This is the Textbook Mania Help Page</h1>
     </div>
 
     <h1>Students</h1>
