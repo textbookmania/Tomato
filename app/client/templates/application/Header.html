@@ -30,6 +30,17 @@
               <li><a href="{{pathFor 'ListSellOffer'}}">List Sell Offers</a></li>
             </ul>
           </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Textbooks<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{pathFor 'ListTextbook'}}">List Textbook</a></li>
+              {{#if isInRole 'admin'}}
+              <li><a href="{{pathFor 'AddTextbook'}}">Add Textbook</a></li>
+              {{/if}}
+            </ul>
+          </li>
+          <li><a href="{{pathFor 'BuyOffers'}}">Buy Offers</a></li>
+          <li><a href="{{pathFor 'SellOffers'}}">Sell Offers</a></li>
           <li><a href="{{pathFor 'Matches'}}">Matches</a></li>
           <li><a href="{{pathFor 'Help'}}">Help</a></li>
           {{/if}}

@@ -117,3 +117,17 @@ th {
 .col-1-3 {
   width: 33.33%;
 }
+
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
+
+.navbar .dropdown-menu {
+  margin-top: 0px;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
+  background-color:transparent;
+}
