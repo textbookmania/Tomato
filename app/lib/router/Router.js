@@ -10,6 +10,18 @@ Router.configure({
   loadingTemplate: 'Loading'
 });
 
+Router.configure({
+  layoutTemplate: 'Layout',
+  waitOn: function() { return Meteor.subscribe("SellOffer"); },
+  loadingTemplate: 'Loading'
+});
+
+Router.configure({
+  layoutTemplate: 'Layout',
+  waitOn: function() { return Meteor.subscribe("BuyOffer"); },
+  loadingTemplate: 'Loading'
+});
+
 Router.route('/', {
   name: 'Home'
 });
@@ -50,6 +62,33 @@ Router.route('/student',{
 Router.route('/viewProfile',{
   name: 'viewProfile'
 });
+
+Router.route('/buyofferList', {
+  name: 'ListBuyOffer'
+});
+
+Router.route('/buyofferAdd', {
+  name: 'AddBuyOffer'
+});
+
+Router.route('/buyofferEdit/:_id', {
+  name: 'EditBuyOffer',
+  data: function() { return BuyOffer.findOne(this.params._id); }
+});
+
+Router.route('/sellofferList', {
+  name: 'ListSellOffer'
+});
+
+Router.route('/sellofferAdd', {
+  name: 'AddSellOffer'
+});
+
+Router.route('/sellofferEdit/:_id', {
+  name: 'EditSellOffer',
+  data: function() { return SellOffer.findOne(this.params._id); }
+});
+
 /*
 Router.route('/profile',{
   waitOn: function () {
