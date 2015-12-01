@@ -29,8 +29,12 @@ div.well.well-lg{
 }
 .well-lg{
   padding: 15px;
-
 }
+.well1{
+  padding-top: 19px;
+  background-color: tomato;
+}
+
 .navbar{
   border-radius: 0px;
   padding: 40px;

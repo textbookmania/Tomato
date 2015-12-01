@@ -51,16 +51,16 @@ Router.route('/sellOffers',{
   name: 'SellOffers'
 });
 
-Router.route('/matches',{
-  name: 'Matches'
-});
-
 Router.route('/student',{
   name: 'Students'
 });
 
 Router.route('/viewProfile',{
   name: 'viewProfile'
+});
+
+Router.route('/matches', {
+  name: 'ListMatches'
 });
 
 Router.route('/buyofferList', {
