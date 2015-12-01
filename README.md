@@ -12,7 +12,7 @@ intuitive interface that allows you to quickly browse, or make a transaction and
 
 #Help
 
-Regular users can refer to our [User Guide](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/meteor-application-template-home.png).
+Users can refer to our [User Guide](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/meteor-application-template-home.png).
 Developers can refer to our [Developer Guide](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/meteor-application-template-home.png).
 For more information contact us [here](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/meteor-application-template-home.png).
 
