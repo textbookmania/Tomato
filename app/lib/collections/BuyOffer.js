@@ -1,11 +1,9 @@
 var expiration = 1;
 
 buyoffer = "BuyOffer";
-
 BuyOffer = new Mongo.Collection(buyoffer);
 
 Meteor.methods({
-
     addBuyOffer: function(doc) {
         check(doc, BuyOffer.simpleSchema());
         BuyOffer.insert(doc);
@@ -57,10 +55,19 @@ BuyOffer.attachSchema(new SimpleSchema({
     condition: {
         label: "Condition",
         type: String,
+        allowedValues: ['Excellent', 'Good', 'Fair', 'Poor'],
         optional: false,
         autoform: {
             group: buyoffer,
-            placeholder: "Condition"
+            afFieldInput:{
+                firstOption:"(Select Condition)"
+            },
+            options:[
+                {label: "Excellent", value: "Excellent"},
+                {label: "Good", value: "Good"},
+                {label: "Fair", value: "Fair"},
+                {label: "Poor", value: "Poor"}
+            ]
         }
     },
     expirationDate: {

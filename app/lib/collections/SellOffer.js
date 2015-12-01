@@ -1,6 +1,6 @@
 var expiration = 1;
 
-selloffer = "SellOffer";  // avoid typos, this string occurs many times.
+selloffer = "SellOffer";
 SellOffer = new Mongo.Collection(selloffer);
 
 Meteor.methods({
@@ -17,7 +17,6 @@ Meteor.methods({
     }
 });
 
-// Publish the entire Collection.  Subscription performed in the router.
 if (Meteor.isServer) {
     Meteor.publish(selloffer, function () {
         return SellOffer.find();
@@ -25,7 +24,6 @@ if (Meteor.isServer) {
 }
 
 SellOffer.attachSchema(new SimpleSchema({
-
     book:{
         type: String,
         autoform:{
@@ -57,10 +55,19 @@ SellOffer.attachSchema(new SimpleSchema({
     condition: {
         label: "Condition",
         type: String,
+        allowedValues: ['Excellent', 'Good', 'Fair', 'Poor'],
         optional: false,
         autoform: {
             group: selloffer,
-            placeholder: "Condition"
+            afFieldInput:{
+                firstOption:"(Select Condition)"
+            },
+            options:[
+                {label: "Excellent", value: "Excellent"},
+                {label: "Good", value: "Good"},
+                {label: "Fair", value: "Fair"},
+                {label: "Poor", value: "Poor"}
+            ]
         }
     },
     expirationDate: {
@@ -68,7 +75,7 @@ SellOffer.attachSchema(new SimpleSchema({
         label: "Expiration",
         optional: true,
         autoValue: function(){
-            d = new Date()
+            d = new Date();
             d.setDate(d.getDate() + expiration);
             return d;
         },
@@ -78,5 +85,4 @@ SellOffer.attachSchema(new SimpleSchema({
             placeholder: "Expiration Date"
         }
     }
-
 }));
