@@ -11,6 +11,9 @@ body {
   background-size: cover;
 }
 
+h2{
+  text-align: center;
+}
 
 div.well.well-lg{
   display:block;
@@ -131,4 +134,10 @@ th {
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
   background-color:transparent;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: tomato;
+  border-color: tomato;
 }

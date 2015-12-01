@@ -1,56 +1,62 @@
 <template name="viewProfile">
 
-    <div class="container-fluid">
-        <div class="col-md-4">
-            <div class="well">
-                <div class="row">
-                    {{#if currentUser.profile.profileImage}}
+  <div class="container-fluid">
+    <div class="col-md-4">
+      <div class="well">
+        <div class="row">
+          {{#if currentUser.profile.profileImage}}
 
-                    <img src="{{ currentUser.profile.profileImage }}" class="img-rounded center-block" height="100px"
-                         width="100px"><br>
-                    {{else}}
-                    <img src="/images/NoProfilePicture.jpg" class="img-rounded center-block" height="100px"
-                         width="100px"><br>
+          <img src="{{ currentUser.profile.profileImage }}" class="img-rounded center-block" height="100px"
+               width="100px"><br>
+          {{else}}
+          <img src="/images/NoProfilePicture.jpg" class="img-rounded center-block" height="100px"
+               width="100px"><br>
 
-                    {{/if}}
+          {{/if}}
 
-                    <h2 style="font-weight: bold">{{ currentUser.profile.firstName }} {{ currentUser.profile.lastName
-                        }}</h2>
+          <h2 style="font-weight: bold">{{ currentUser.profile.firstName }} {{ currentUser.profile.lastName
+            }}</h2>
 
 
-                    <h2><i class="fa fa-phone"></i> {{ currentUser.profile.phone }}</h2>
-                    <h2><i class="fa fa-envelope-o"></i> {{ currentUser.profile.email}}</h2>
-                </div>
-            </div>
+          <h2><i class="fa fa-phone"></i> {{ currentUser.profile.phone }}</h2>
+
+          <h2><i class="fa fa-envelope-o"></i> {{ currentUser.profile.email}}</h2>
         </div>
+      </div>
     </div>
+  </div>
 
-    <form class="main form page">
-        <div class="form-group">
-            <label class="control-label" for="profile-image">Profile Image</label>
+  <form role="form">
+    <div class="checkbox checkbox-primary">
+      <input type="checkbox" id="checkbox1">
+      <label for="checkbox1"> Contact Me</label>
+    </div>
+  </form>
 
-            <input type="url" class="form-control" id="profile-image" value="{{ currentUser.profile.profileImage }}"
 
+  <form class="main form page">
+    <div class="form-group">
+      <label class="control-label" for="profile-image">Profile Image</label>
 
-                   placeholder="Profile image url">
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="first-name">First Name</label>
-            <input type="text" class="form-control" id="first-name" value="{{ currentUser.profile.firstName }}"
-                   placeholder="First name">
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="last-name">Last Name</label>
-            <input type="text" class="form-control" id="last-name" value="{{currentUser.profile.lastName }}"
-                   placeholder="Last name">
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="phone">Phone Number</label>
-            <input type="text" class="form-control" id="phone" value="{{currentUser.profile.phone }}"
-                   placeholder="(xxx)xxx-xxxx">
-        </div>
-        <input type="submit" value="Submit" class="btn btn-primary submit"/>
-    </form>
-
+      <input type="url" class="form-control" id="profile-image" value="{{ currentUser.profile.profileImage }}"
+             placeholder="Profile image url">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="first-name">First Name</label>
+      <input type="text" class="form-control" id="first-name" value="{{ currentUser.profile.firstName }}"
+             placeholder="First name">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="last-name">Last Name</label>
+      <input type="text" class="form-control" id="last-name" value="{{currentUser.profile.lastName }}"
+             placeholder="Last name">
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="phone">Phone Number</label>
+      <input type="text" class="form-control" id="phone" value="{{currentUser.profile.phone }}"
+             placeholder="(xxx)xxx-xxxx">
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+  </form>
 
 </template>
