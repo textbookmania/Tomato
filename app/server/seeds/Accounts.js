@@ -26,4 +26,5 @@ Accounts.onLogin(function () {
   }
   var email = username.concat("@hawaii.edu");
   Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.email": email}});
+  /*Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.contact": true}});*/
 });

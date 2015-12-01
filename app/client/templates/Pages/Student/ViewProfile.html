@@ -14,13 +14,16 @@
 
           {{/if}}
 
-          <h2 style="font-weight: bold">{{ currentUser.profile.firstName }} {{ currentUser.profile.lastName
-            }}</h2>
+          <h2 style="font-weight: bold">{{ currentUser.profile.firstName }} {{ currentUser.profile.lastName}}</h2>
 
-
+          {{#if currentUser.profile.phone}}
           <h2><i class="fa fa-phone"></i> {{ currentUser.profile.phone }}</h2>
+          {{/if}}
 
+          {{#if currentUser.profile.contact}}
           <h2><i class="fa fa-envelope-o"></i> {{ currentUser.profile.email}}</h2>
+          {{/if}}
+
         </div>
       </div>
     </div>
