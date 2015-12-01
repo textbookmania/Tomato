@@ -3,7 +3,7 @@ body {
 }
 
 .header-image{
-  background-image: url('/images/books.jpg');
+  background-image: url('/images/textbooksfeature.jpg');
   background-size: cover;
   height: 200px;
 }
