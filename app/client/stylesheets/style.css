@@ -4,10 +4,11 @@ body {
 }
 
 .header-image{
+  background-image: url('/images/textbooksfeature.jpg');
+  background-size: cover;
   background: url('/images/POSTfront.jpg');
   height: 200px;
   background-size: cover;
-
 }
 
 
