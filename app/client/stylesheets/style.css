@@ -26,8 +26,22 @@ div.well.well-lg{
 }
 .well-lg{
   padding: 15px;
-
 }
+
+.well{
+  text-align: center;
+}
+
+.btn-primary{
+  color: black;
+  background-color: tomato;
+  border-color: tomato;
+}
+
+.btn{
+  margin-bottom: 10px;
+}
+
 .navbar{
   border-radius: 0px;
   padding: 40px;
