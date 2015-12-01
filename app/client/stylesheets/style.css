@@ -4,12 +4,9 @@ body {
 }
 
 .header-image{
-<<<<<<< HEAD
   background-image: url('/images/textbooksfeature.jpg');
   background-size: cover;
-=======
   background: url('/images/POSTfront.jpg');
->>>>>>> origin/master
   height: 200px;
   background-size: cover;
 
