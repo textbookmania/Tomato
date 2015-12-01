@@ -1,5 +1,4 @@
 <template name="Header">
-
   <nav class="navbar navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -13,16 +12,18 @@
       </div>
       <ul class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav navbar-right">
-          {{#if currentUser}}
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Textbooks<b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
+              {{#if currentUser}}
               {{#if isInRole 'admin'}}
               <li><a href="{{pathFor 'AddTextbook'}}">Add Textbook</a></li>
+              {{/if}}
               {{/if}}
               <li><a href="{{pathFor 'ListTextbook'}}">List Textbook</a></li>
             </ul>
           </li>
+          {{#if currentUser}}
           <li class = "dropdown">
             <a class = "dropdown-toggle" data-toggle="dropdown" href="{{pathFor 'ListBuyOffer'}}">Buy Offers<b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
@@ -42,7 +43,6 @@
           {{/if}}
           {{> CasLogin }}
         </ul>
-
       </ul>
     </div>
   </nav>
