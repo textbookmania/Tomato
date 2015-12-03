@@ -1,8 +1,6 @@
 <template name="Home">
   <h1> Aloha, Welcome to Text Book Exchange</h1>
-
   <h2><b>Text Book Exchange</b> is a website where UH ICS students can buy and sell textbooks between students</h2>
-  {{#IfLoggedIn}}
   <div class="grid">
     <div class="col-2-3">
       <div class="row">
@@ -15,10 +13,8 @@
             </div>
           </div>
         </a>
-
         <div class="col-md-1">
         </div>
-
         <a href="{{pathFor 'ListBuyOffer'}}">
           <div class="col-md-1">
             <div class="well well-lg">
@@ -28,7 +24,6 @@
             </div>
           </div>
         </a>
-
         <div class="col-md-1">
         </div>
         <a href="{{pathFor 'Matches'}}">
@@ -40,7 +35,6 @@
             </div>
           </div>
         </a>
-
         <div class="col-md-1">
         </div>
         <a href="{{ pathFor 'ListTextbook' }}">
@@ -52,7 +46,6 @@
             </div>
           </div>
         </a>
-
         <div class="col-md-1">
         </div>
         <a href="{{pathFor 'ListSellOffer'}}">
@@ -60,12 +53,10 @@
             <div class="well well-lg">
               <div class="navigations">
                 <span title="View Sell Offers"><i class="fa fa-money"></i></span>
-
               </div>
             </div>
           </div>
         </a>
-
         <div class="col-md-1">
         </div>
         <a href="{{pathFor 'Help'}}">
@@ -82,5 +73,4 @@
   </div>
   <div class="col-1-3">
   </div>
-  {{/IfLoggedIn}}
 </template>
