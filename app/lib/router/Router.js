@@ -89,15 +89,12 @@ Router.route('/sellofferEdit/:_id', {
   data: function() { return SellOffer.findOne(this.params._id); }
 });
 
-/*
-Router.route('/profile',{
-  waitOn: function () {
-    return Meteor.subscribe('images')
-  },
-  action: function () {
-    if (this.ready())
-      this.render('Profile');
-  else
-    this.render('Loading');
-  }
-});*/
+
+Router.route('/EditStudent/', {
+  name: 'EditStudent',
+  data: function() { return Student.findOne({email: checkUsername()}) }
+});
+
+Router.route('/liststudent', {
+  name: 'ListStudent'
+});
