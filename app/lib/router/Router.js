@@ -26,15 +26,15 @@ Router.route('/', {
   name: 'Home'
 });
 
-Router.route('/list', {
+Router.route('/listTextbook', {
   name: 'ListTextbook'
 });
 
-Router.route('/add', {
+Router.route('/addTextbook', {
   name: 'AddTextbook'
 });
 
-Router.route('/textbook/:_id', {
+Router.route('/textbookEdit/:_id', {
   name: 'EditTextbook',
   data: function() { return Textbook.findOne(this.params._id); }
 });

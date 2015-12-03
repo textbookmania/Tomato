@@ -1,7 +1,5 @@
 <template name="ListTextbook">
-  {{#IfLoggedIn}}
   <div class="well">
-
     <table class="table">
       <thead>
       <tr>
@@ -9,11 +7,12 @@
         <th>Title</th>
         <th>Author</th>
         <th>ISBN</th>
+        {{#if isInRole 'admin'}}
         <th>Edit</th>
         <th>Delete</th>
+        {{/if}}
       </tr>
       </thead>
-
       <tbody>
       {{#each textbookList}}
       <tr>
@@ -21,12 +20,13 @@
         <td>{{title}}</td>
         <td>{{author}}</td>
         <td>{{isbn}}</td>
+        {{#if isInRole 'admin'}}
         <td><a href="{{pathFor 'EditTextbook'}}">Edit</a></td>
         <td><a class="delete" href="#">Delete</a></td>
+        {{/if}}
       </tr>
       {{/each}}
       </tbody>
     </table>
   </div>
-  {{/IfLoggedIn}}
 </template>

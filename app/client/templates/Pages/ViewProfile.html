@@ -1,37 +1,28 @@
 <template name="viewProfile">
-
+    {{#IfLoggedIn}}
     <div class="container-fluid">
         <div class="col-md-4">
             <div class="well">
                 <div class="row">
                     {{#if currentUser.profile.profileImage}}
-
                     <img src="{{ currentUser.profile.profileImage }}" class="img-rounded center-block" height="100px"
                          width="100px"><br>
                     {{else}}
                     <img src="/images/NoProfilePicture.jpg" class="img-rounded center-block" height="100px"
                          width="100px"><br>
-
                     {{/if}}
-
                     <h2 style="font-weight: bold">{{ currentUser.profile.firstName }} {{ currentUser.profile.lastName
                         }}</h2>
-
-
                     <h2><i class="fa fa-phone"></i> {{ currentUser.profile.phone }}</h2>
                     <h2><i class="fa fa-envelope-o"></i> {{ currentUser.profile.email}}</h2>
                 </div>
             </div>
         </div>
     </div>
-
     <form class="main form page">
         <div class="form-group">
             <label class="control-label" for="profile-image">Profile Image</label>
-
             <input type="url" class="form-control" id="profile-image" value="{{ currentUser.profile.profileImage }}"
-
-
                    placeholder="Profile image url">
         </div>
         <div class="form-group">
@@ -51,6 +42,5 @@
         </div>
         <input type="submit" value="Submit" class="btn btn-primary submit"/>
     </form>
-
-
+    {{/IfLoggedIn}}
 </template>

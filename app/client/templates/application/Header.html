@@ -1,5 +1,4 @@
 <template name="Header">
-
   <nav class="navbar navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -13,7 +12,6 @@
       </div>
       <ul class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav navbar-right">
-          {{#if currentUser}}
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Textbooks<b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
@@ -39,10 +37,8 @@
           </li>
           <li><a href="{{pathFor 'Matches'}}">Matches</a></li>
           <li><a href="{{pathFor 'Help'}}">Help</a></li>
-          {{/if}}
           {{> CasLogin }}
         </ul>
-
       </ul>
     </div>
   </nav>
