@@ -6,12 +6,21 @@ body {
 .header-image{
   background-image: url('/images/textbooksfeature.jpg');
   background-size: cover;
-  background: url('/images/POSTfront.jpg');
   height: 200px;
   background-size: cover;
 }
 
+button{
+  border-radius:80%;
+  background-color: tomato;
+  padding: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  width: 110px;
+  height: 60px;
+  border-color: tomato;
 
+}
 div.well.well-lg{
   display:block;
   border-radius:40%;

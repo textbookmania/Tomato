@@ -1,27 +1,49 @@
 <template name="Help">
 
-
+    <h1>Thank you for visiting the help page</h1>
     {{#IfLoggedIn}}
-    <h1>You are logged in</h1>
+    <h2>You are logged in</h2>
     {{/IfLoggedIn}}
-
     {{#if isInRole 'admin'}}
-
-    <h1> You are admin</h1>
-
+    <h2> You have an Admin Account</h2>
     {{/if}}
+    <h1>
 
 
-    <div class="jumbotron">
+    </h1>
 
-        <h1>Welcome! This is the Textbook Mania Help Page</h1>
+    <div class="container">
+        <div class="well">
+            <h1>Select one of the topics below for more information</h1>
+            <button data-toggle="collapse" data-target="#buyHelp">Buy Offers</button>
+            <div id="buyHelp" class="collapse">
+                <h2><b>Buy Offers</b> are where students list a book that they are looking to buy. You can either browse
+                    current offers or add you own. Adding and offer requires the following:
+                    <li>Textbook</li>
+                    <li>Amount offered</li>
+                    <li>Condition wanted. If this is not important to you, select "Don't Care"</li>
+                </h2>
+            </div>
+            <button data-toggle="collapse" data-target="#sellHelp">Sell Offers</button>
+            <div id="sellHelp" class="collapse">
+                <h2><b>Sell Offers</b> are where students list books that they are want to sell. You can either browse current offers or add you own. Adding and offer requires the following:
+                    <li>Textbook</li>
+                    <li>Amount desired</li>
+                    <li>Current textbook condition</li>
+                </h2>
+            </div>
+            <button data-toggle="collapse" data-target="#matchHelp">Matches</button>
+            <div id="matchHelp" class="collapse">
+                <h2> The matches tab is where you can find other students looking to buy or sell the same books as you
+                </h2>
+            </div>
+            <button data-toggle="collapse" data-target="#contactHelp">Contact Us</button>
+            <div id="contactHelp" class="collapse">
+                <h2>
+                    <li>Email: tbe-tomato@gmail.com</li>
+                    <li>Slack: tbe-tomato</li>
+                </h2>
+            </div>
+        </div>
     </div>
-
-    <h1>Students</h1>
-    <h1>Textbooks</h1>
-    <h1>Buy Offers</h1>
-    <h1>Matches</h1>
-    <h1>Contact Us</h1>
-
-
 </template>
