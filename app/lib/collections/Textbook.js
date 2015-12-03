@@ -64,6 +64,7 @@ Textbook.attachSchema(new SimpleSchema({
     label: "ISBN",
     type: String,
     optional: false,
+    min: 10,
     max: 10,
     autoform: {
       group: textbook,

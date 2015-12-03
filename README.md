@@ -3,7 +3,7 @@
 Tomato brings together people together who want to exchange their textbooks.  Currently the textbooks are pulled from 
 the University of Hawaii at Manoa, ICS curriculum.
 
-![placeholder image](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/meteor-application-template-home.png)
+![placeholder image](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/tomato-home.PNG)
 
 #Why use Tomato over the other guys?
 
@@ -12,9 +12,9 @@ intuitive interface that allows you to quickly browse, or make a transaction and
 
 #Help
 
-Regular users can refer to our [User Guide](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/meteor-application-template-home.png).
-Developers can refer to our [Developer Guide](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/meteor-application-template-home.png).
-For more information contact us [here](https://raw.githubusercontent.com/textbookmania/Tomato/master/doc/meteor-application-template-home.png).
+Users can refer to our [User Guide](https://github.com/textbookmania/Tomato/wiki/User).
+Developers can refer to our [Developer Guide](https://github.com/textbookmania/Tomato/wiki/Developer).
+For more information contact us [here](https://github.com/textbookmania/Tomato/wiki/Contact).
 
 #Where is Tomato
 
