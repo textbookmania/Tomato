@@ -55,7 +55,7 @@ BuyOffer.attachSchema(new SimpleSchema({
     condition: {
         label: "Condition",
         type: String,
-        allowedValues: ['Excellent', 'Good', 'Fair', 'Poor'],
+        allowedValues: ['Excellent', 'Good', 'Fair', 'Poor', "Don't care"],
         optional: false,
         autoform: {
             group: buyoffer,
@@ -66,7 +66,8 @@ BuyOffer.attachSchema(new SimpleSchema({
                 {label: "Excellent", value: "Excellent"},
                 {label: "Good", value: "Good"},
                 {label: "Fair", value: "Fair"},
-                {label: "Poor", value: "Poor"}
+                {label: "Poor", value: "Poor"},
+                {label: "Don't care", value: "Don't care"}
             ]
         }
     },
