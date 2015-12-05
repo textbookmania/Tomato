@@ -3,9 +3,6 @@ student = "Student";
 Student = new Mongo.Collection(student);
 
 Accounts.onLogin(function () {
-  if (Meteor.user().profile.name && _.contains(Meteor.settings.admin_users, Meteor.user().profile.name)) {
-    Roles.addUsersToRoles(Meteor.userId(), 'admin');
-  }
 
   if (Meteor.isServer) {
     if (!_.findWhere(Student.find().fetch(), {email: Meteor.user().profile.name})) {
@@ -19,6 +16,18 @@ Accounts.onLogin(function () {
 
 
 Meteor.methods({
+/*
+  banUser:function(doc) {
+    check(doc, Student.simpleSchema());
+    Student.insert(doc);
+    console.log("*********ADDED: ");
+    console.log(doc);
+  },
+
+
+
+  */
+
   /**
    * Invoked by AutoForm to add a new BuyOffer record.
    * @param doc The Offer document.

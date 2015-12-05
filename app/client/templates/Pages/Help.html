@@ -7,6 +7,9 @@
     {{#if isInRole 'admin'}}
     <h2> You have an Admin Account</h2>
     {{/if}}
+    {{#if isInRole 'banned'}}
+    <h2> BANNED!!</h2>
+    {{/if}}
     <h1>
 
 
@@ -42,6 +45,14 @@
                 <h2>
                     <li>Email: tbe-tomato@gmail.com</li>
                     <li>Slack: tbe-tomato</li>
+                    <li>Post your questions via the Meteor tag on <a href="http://stackoverflow.com/questions/tagged/meteor">stackoverflow</a>.</li>
+                </h2>
+            </div>
+            <button data-toggle="collapse" data-target="#contactResources">More Links</button>
+            <div id="contactResources" class="collapse">
+                <h2>
+                    <li><a href= "https://github.com/textbookmania/Tomato/wiki/User">User Wiki</a></li>
+                    <li> <a href= "https://github.com/textbookmania/Tomato/wiki/Developer">Developer Wiki</a></li>
                 </h2>
             </div>
         </div>

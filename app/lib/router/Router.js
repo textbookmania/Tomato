@@ -89,15 +89,6 @@ Router.route('/sellofferEdit/:_id', {
   data: function() { return SellOffer.findOne(this.params._id); }
 });
 
-/*
-Router.route('/profile',{
-  waitOn: function () {
-    return Meteor.subscribe('images')
-  },
-  action: function () {
-    if (this.ready())
-      this.render('Profile');
-  else
-    this.render('Loading');
-  }
-});*/
+Router.route('/banUser', {
+  name: 'banUser'
+});

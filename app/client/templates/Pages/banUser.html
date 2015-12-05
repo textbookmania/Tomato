@@ -1,0 +1,17 @@
+<template name="banUser">
+
+    {{#if isInRole 'admin'}}
+
+
+    {{else}}
+    <h1>You are not an Admin user. You cannot ban other users</h1>
+    {{/if}}
+
+    <form class="main form page">
+        <label class="control-label" for="banuser">Ban User</label>
+            <input type="text" name="text" id="banuser" placeholder="user name">
+
+        <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    </form>
+</template>
+
