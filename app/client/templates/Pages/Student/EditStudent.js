@@ -6,9 +6,9 @@
  */
 AutoForm.hooks({
   EditStudentForm: {
-
     onSuccess: function(formType, result) {
-      Router.go('Home');}
+        Router.go('ListStudent');
+      }
   }
 });
 

@@ -156,6 +156,18 @@ th {
   padding-top: 200px;
 }
 
+.studentmiddle{
+  border-top: solid 8px tomato;
+  border-bottom: solid 8px tomato;
+  border: solid 8px tomato;
+  margin: 180px;
+  position: static;
+}
+
+.row{
+  text-align: center;
+}
+
 .studentright {
   border-top: solid 8px tomato;
   border-bottom: solid 8px tomato;
@@ -182,8 +194,46 @@ div.row.box1{
   margin-top: 10px;
 }
 
+.col-md-6.studentleft{
+  padding-top: 80px;
+}
+
 h4 {
   text-align: left;
   font-size: 25px;
   font-weight: bold;
 }
+
+h5{
+   text-align: center;
+  font-size: 50px;
+}
+
+div.img-div {
+  /* make it responsive */
+  max-width: 100%;
+  width: 30%;
+  height: 100%;
+  display:block;
+  /* div height to be the same as width*/
+  padding-top: 30%;
+
+  /* make it a cirkle */
+  border-radius: 50%;
+
+  /* Centering on image`s center*/
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+
+  /* it makes the clue thing, takes smaller dimention to fill div */
+  background-size: cover;
+
+  /* it is optional, for making this div centered in parent*/
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
