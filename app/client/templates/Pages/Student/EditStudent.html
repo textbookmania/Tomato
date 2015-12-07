@@ -2,7 +2,6 @@
   {{#IfLoggedIn}}
   <div class="row box1" style="background-image: url('/images/textbookheader.png'); background-size: cover;">
     <div class="col-md-6 studentleft">
-      <div class="img-div" style="background-image: url({{pic}});"> </div>
       <h4 style="text-transform: uppercase; text-align: center; color: black;"><i class="fa fa-user fa-2x"></i> {{email}}</h4>
       <span style="font-weight: bold;">First Name: </span> {{first}} <br>
       <span style="font-weight: bold;">Last Name: </span> {{last}} <br>
@@ -10,7 +9,15 @@
       <span style="font-weight: bold;">Email: </span> {{email}} <br>
 
       {{#if afFieldValueIs name="notification1" value="true"}}
+      <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
+      {{else}}
+      <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
+      {{/if}}
 
+      {{#if afFieldValueIs name="notification2" value="true"}}
+      <span style="font-weight: bold;">Call?: </span> {{notification2}} <br>
+      {{else}}
+      <span style="font-weight: bold;">call?: </span> {{notification2}} <br>
       {{/if}}
 
     </div>
