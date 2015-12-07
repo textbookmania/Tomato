@@ -9,7 +9,7 @@ Template.ListStudent.helpers({
 });
 
 Template.ListStudent.events({
-  'click .deletestudent': function(e) {
+    'click .deletestudent': function(e) {
     e.preventDefault();
 
     if (confirm("Delete this post?")) {

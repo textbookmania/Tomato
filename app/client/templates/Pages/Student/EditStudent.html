@@ -6,16 +6,17 @@
       <h4 style="text-transform: uppercase; text-align: center; color: black;">HELLO, {{email}}</h4>
       <span style="font-weight: bold;">First Name: </span> {{first}} <br>
       <span style="font-weight: bold;">Last Name: </span> {{last}} <br>
+      <span style="font-weight: bold;">Phone Number: </span> {{phone}} <br>
+      <span style="font-weight: bold;">Email: </span> {{email}} <br>
 
-      {{#if currentUser.profile.notification}}
-
-      <span class="glyphicon glyphicon-wrench"></span>
+      {{#if afFieldValueIs name="notification1" value="true"}}
+          <span style="..."><i class="fa fa-phone"></i></span>
       {{else}}
-
-
+          <i class="fa fa-phone"></i>
       {{/if}}
 
-      <span style="...">Notifications: </span> {{notification}}
+      <span style="...">TEST: </span> {{notification1}}
+      <i class="fa fa-envelope-o"></i>
     </div>
 
     <div class="col-md-6 studentright" style="background-color: white;">
@@ -24,10 +25,12 @@
         doc=this meteormethod="editStudent"}}
         {{> afQuickField name="first"}}
         {{> afQuickField name="last"}}
+        {{> afQuickField name="phone"}}
         {{> afQuickField name="pic"}}
-        {{> afQuickField name="notification"}}
+        {{> afQuickField name="notification1"}}
+        {{> afQuickField name="notification2"}}
+        <input type="submit" value="Submit" class="btn btn-primary submit"/>
 
-        <button type="submit" class="btn btn-primary">UPDATE</button>
         {{/autoForm}}
       </div>
     </div>

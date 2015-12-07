@@ -15,7 +15,28 @@ Accounts.onLogin(function () {
     }
   }
 });
+/*
+Accounts.validateNewUser(function (user) {
+  if (user) {
+    var username = user.services.cas.id;
+    if (username && _.contains(Meteor.settings.allowed_users, username)) {
+      return true;
+    }
+  }
+  throw new Meteor.Error(403, "User not in the allowed list");
+});
 
+/*
+ Comares user's profile name against settings list of admin users. If they match, user is given admin role.
+ */
+/*Accounts.onLogin(function () {
+  var username = Meteor.user().profile.name;
+  if (username && _.contains(Meteor.settings.adminUsers, username)) {
+    Roles.addUsersToRoles(Meteor.userId(), 'admin');
+  }
+  var email = username.concat("@hawaii.edu");
+  Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.email": email}});
+});*/
 
 
 Meteor.methods({
@@ -73,6 +94,7 @@ Student.attachSchema(new SimpleSchema({
       palceholder: "Last Name"
     }
   },
+
   email: {
     label: "UHID",
     type: String,
@@ -83,6 +105,7 @@ Student.attachSchema(new SimpleSchema({
       palceholder: "UHID"
     }
   },
+
   pic: {
     label: "Pic URL",
     type: String,
@@ -92,7 +115,19 @@ Student.attachSchema(new SimpleSchema({
       palceholder: "Pic URL"
     }
   },
-  notification: {
+
+  phone: {
+    label: "Phone #",
+    type: String,
+    optional: true,
+    max: 20,
+    autoform: {
+      group: student,
+      palceholder: "Phone #"
+    }
+  },
+
+  notification1: {
     label: "Email Notifications",
     type: Boolean,
     optional: true,
@@ -100,6 +135,17 @@ Student.attachSchema(new SimpleSchema({
     autoform: {
       group: student,
       placeholder: "Email Notifications"
+    }
+  },
+
+  notification2: {
+    label: "Call Me",
+    type: Boolean,
+    optional: true,
+    max: 20,
+    autoform: {
+      group: student,
+      placeholder: "Call Me"
     }
   }
 }));
