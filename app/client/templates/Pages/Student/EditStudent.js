@@ -2,17 +2,16 @@
  * After successful edit, go to List page.
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  *  <button type="submit" class="btn btn-primary">UPDATE</button>
+ *   <input type="submit" value="Submit" class="btn btn-primary submit"/>
  */
 AutoForm.hooks({
   EditStudentForm: {
 
     onSuccess: function(formType, result) {
-      if(confirm("Submit?")){
       Router.go('Home');}
-    }
   }
 });
-/*
+
 Template.EditStudent.events({
   'submit form': function(e) {
     e.preventDefault();
@@ -23,4 +22,4 @@ Template.EditStudent.events({
     Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.phone": $(e.target).find('[id=phone]').val()}});
 
   }
-});*/
+});

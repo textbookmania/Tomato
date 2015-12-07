@@ -4,17 +4,13 @@
     <div class="col-md-4">
       <div class="well">
         <div class="row">
-
           {{#each studentList}}
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 453bdb0... Working December 6 part 4
              <h2 style="font-weight: bold">{{first}} {{last}}</h2>
 
           {{#if afFieldValueIs name="notification1" value="true"}}
           <h2>{{email}}</h2>
           {{else}}
+          <h2>{{phone}}</h2>
           {{/if}}
 
           {{#if afFieldValueIs name="notification2" value="true"}}

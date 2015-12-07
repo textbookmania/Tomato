@@ -3,7 +3,7 @@
   <div class="row box1" style="background-image: url('/images/textbookheader.png'); background-size: cover;">
     <div class="col-md-6 studentleft">
       <h4 style="text-transform: uppercase; text-align: center; color: black;"><i class="fa fa-user fa-2x"></i> {{email}}</h4>
-      <span style="font-weight: bold;">First Name: </span> {{first}} <br>
+      <span style="font-weight: bold;">First Name: </span> {{last}} <br>
       <span style="font-weight: bold;">Last Name: </span> {{last}} <br>
       <span style="font-weight: bold;">Phone Number: </span> {{phone}} <br>
       <span style="font-weight: bold;">Email: </span> {{email}} <br>
@@ -33,7 +33,6 @@
         {{> afQuickField name="notification1"}}
         {{> afQuickField name="notification2"}}
         <input type="submit" value="Submit" class="btn btn-primary submit"/>
-
         {{/autoForm}}
       </div>
     </div>
