@@ -63,8 +63,8 @@ Router.route('/sellOffers',{
   name: 'SellOffers'
 });
 
-Router.route('/matches',{
-  name: 'Matches'
+Router.route('/listmatches',{
+  name: 'ListMatches'
 });
 
 Router.route('/buyofferList', {

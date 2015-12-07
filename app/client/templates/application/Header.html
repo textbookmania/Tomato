@@ -13,7 +13,7 @@
       <ul class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Textbooks<b class="caret"></b></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-book fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
               {{#if isInRole 'admin'}}
               <li><a href="{{pathFor 'AddTextbook'}}">Add Textbook</a></li>
@@ -22,21 +22,21 @@
             </ul>
           </li>
           <li class = "dropdown">
-            <a class = "dropdown-toggle" data-toggle="dropdown" href="{{pathFor 'ListBuyOffer'}}">Buy Offers<b class="caret"></b></a>
+            <a class = "dropdown-toggle" data-toggle="dropdown" href="{{pathFor 'ListBuyOffer'}}"><i class="fa fa-shopping-cart fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="{{pathFor 'AddBuyOffer'}}">Add Buy Offer</a></li>
               <li><a href="{{pathFor 'ListBuyOffer'}}">List Buy Offers</a></li>
             </ul>
           </li>
           <li class = "dropdown">
-            <a class = "dropdown-toggle" data-toggle="dropdown" href="{{pathFor 'ListSellOffer'}}">Sell Offers<b class="caret"></b></a>
+            <a class = "dropdown-toggle" data-toggle="dropdown" href="{{pathFor 'ListSellOffer'}}"><i class="fa fa-money fa-2x"></i><b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="{{pathFor 'AddSellOffer'}}">Add Sell Offer</a></li>
               <li><a href="{{pathFor 'ListSellOffer'}}">List Sell Offers</a></li>
             </ul>
           </li>
-          <li><a href="{{pathFor 'Matches'}}">Matches</a></li>
-          <li><a href="{{pathFor 'Help'}}"><i class="fa fa-envelope-o"></i>Help</a></li>
+          <li><a href="{{pathFor 'ListMatches'}}"><i class="fa fa-users fa-2x"></i></a></li>
+          <li><a href="{{pathFor 'Help'}}"><i class="fa fa-info-circle fa-2x"></i></a></li>
 
 
           {{> CasLogin }}
