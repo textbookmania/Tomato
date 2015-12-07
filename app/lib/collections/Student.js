@@ -3,17 +3,30 @@ student = "Student";
 Student = new Mongo.Collection(student);
 
 Accounts.onLogin(function () {
+  var username = Meteor.user().profile.name;
+
   if (Meteor.user().profile.name && _.contains(Meteor.settings.admin_users, Meteor.user().profile.name)) {
     Roles.addUsersToRoles(Meteor.userId(), 'admin');
   }
 
-  if (Meteor.isServer) {
+  var email = username.concat("@hawaii.edu");
+  var pic = Meteor.user().profile.pic;
+  var first = Meteor.user().profile.first;
+  var last = Meteor.user().profile.last;
+  var phone = Meteor.user().profile.phone;
+  Meteor.users.update({_id: Meteor.userId()}, {$set: {"email": email}});
+  Meteor.users.update({_id: Meteor.userId()}, {$set: {"pic": pic}});
+  Meteor.users.update({_id: Meteor.userId()}, {$set: {"first": first}});
+  Meteor.users.update({_id: Meteor.userId()}, {$set: {"last": last}});
+  Meteor.users.update({_id: Meteor.userId()}, {$set: {"phone": phone}});
+
+ /* if (Meteor.isServer) {
     if (!_.findWhere(Student.find().fetch(), {email: Meteor.user().profile.name})) {
       Student.insert({
         'email': Meteor.user().profile.name
       });
     }
-  }
+  }*/
 });
 /*
 Accounts.validateNewUser(function (user) {
