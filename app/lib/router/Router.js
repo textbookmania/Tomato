@@ -2,7 +2,13 @@
  * Configure Iron Router.
  * See: http://iron-meteor.github.io/iron-router/
  */
-
+checkUsername = function() {
+  if (Meteor.user()) {
+    if (!Meteor.loggingIn()) {
+      return Meteor.user().profile.name;
+    }
+  }
+};
 
 Router.configure({
   layoutTemplate: 'Layout',
@@ -19,6 +25,12 @@ Router.configure({
 Router.configure({
   layoutTemplate: 'Layout',
   waitOn: function() { return Meteor.subscribe("BuyOffer"); },
+  loadingTemplate: 'Loading'
+});
+
+Router.configure({
+  layoutTemplate: 'Layout',
+  waitOn: function() { return Meteor.subscribe("Student"); },
   loadingTemplate: 'Loading'
 });
 
@@ -55,14 +67,6 @@ Router.route('/matches',{
   name: 'Matches'
 });
 
-Router.route('/student',{
-  name: 'Students'
-});
-
-Router.route('/viewProfile',{
-  name: 'viewProfile'
-});
-
 Router.route('/buyofferList', {
   name: 'ListBuyOffer'
 });
@@ -89,12 +93,25 @@ Router.route('/sellofferEdit/:_id', {
   data: function() { return SellOffer.findOne(this.params._id); }
 });
 
-
-Router.route('/EditStudent/', {
-  name: 'EditStudent',
-  data: function() { return Student.findOne({email: checkUsername()}) }
+/**/
+Router.route('/viewProfile',{
+  name: 'viewProfile'
 });
 
+Router.route('/studnt',{
+  name: 'Students'
+});
+
+/**/
 Router.route('/liststudent', {
   name: 'ListStudent'
+});
+
+Router.route('/addstudent', {
+  name: 'AddStudent'
+});
+
+Router.route('/student/', {
+  name: 'EditStudent',
+  data: function() { return Student.findOne({email: checkUsername()}) }
 });

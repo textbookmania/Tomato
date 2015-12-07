@@ -62,6 +62,7 @@ Student.attachSchema(new SimpleSchema({
       palceholder: "First Name"
     }
   },
+  
   last: {
     label: "Last Name",
     type: String,
@@ -86,13 +87,12 @@ Student.attachSchema(new SimpleSchema({
     label: "Pic URL",
     type: String,
     optional: true,
-    max: 120,
     autoform: {
       group: student,
       palceholder: "Pic URL"
     }
   },
-  notif: {
+  notification: {
     label: "Email Notifications",
     type: Boolean,
     optional: true,

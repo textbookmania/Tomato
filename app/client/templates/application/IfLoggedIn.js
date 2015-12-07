@@ -9,10 +9,7 @@ Template.IfLoggedIn.helpers({
   /**
    * @returns {boolean} True if there is a logged in user.
    */
-
   canShow: function () {
-
     return !!Meteor.user();
-
   }
 });

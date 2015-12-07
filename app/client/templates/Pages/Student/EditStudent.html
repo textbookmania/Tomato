@@ -5,7 +5,17 @@
       <div class="img-div" style="background-image: url({{pic}});"> </div>
       <h4 style="text-transform: uppercase; text-align: center; color: black;">HELLO, {{email}}</h4>
       <span style="font-weight: bold;">First Name: </span> {{first}} <br>
-      <span style="font-weight: bold;">Last Name: </span> {{last}}
+      <span style="font-weight: bold;">Last Name: </span> {{last}} <br>
+
+      {{#if currentUser.profile.notification}}
+
+      <span class="glyphicon glyphicon-wrench"></span>
+      {{else}}
+
+
+      {{/if}}
+
+      <span style="...">Notifications: </span> {{notification}}
     </div>
 
     <div class="col-md-6 studentright" style="background-color: white;">
@@ -15,7 +25,7 @@
         {{> afQuickField name="first"}}
         {{> afQuickField name="last"}}
         {{> afQuickField name="pic"}}
-        {{> afQuickField name="notif"}}
+        {{> afQuickField name="notification"}}
 
         <button type="submit" class="btn btn-primary">UPDATE</button>
         {{/autoForm}}

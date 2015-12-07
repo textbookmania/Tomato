@@ -60,7 +60,6 @@ footer{
   background: url('/images/black.jpg');
   color: tomato;
   padding: 20px;
-
 }
 
 p.text-center.text-muted{
@@ -148,7 +147,6 @@ th {
 }
 
 .studentc {
-  background-color: tomato;
   border: none;
   box-shadow: none;
 }
@@ -159,16 +157,32 @@ th {
 }
 
 .studentright {
-  border-top: solid 8px #00AFDD;
-  margin: 140px 0 0 0;
+  border-top: solid 8px tomato;
+  border-bottom: solid 8px tomato;
+  border: solid 8px tomato;
+  margin: 180px 0 0 0;
+  position: static;
 }
 
 div.row.box1{
   background-image: url('/images/fabric_gray.png');
 }
 
+.well.studentc{
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
+}
+
+.row.box1 {
+  margin-bottom: 100px;
+}
+
+.col-md-6.studentright{
+  margin-top: 10px;
+}
+
 h4 {
-  color: tomato;
   text-align: left;
   font-size: 25px;
   font-weight: bold;
