@@ -98,9 +98,6 @@ Router.route('/viewProfile',{
   name: 'viewProfile'
 });
 
-Router.route('/studnt',{
-  name: 'Students'
-});
 
 /**/
 Router.route('/liststudent', {

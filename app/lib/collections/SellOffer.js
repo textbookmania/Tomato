@@ -84,5 +84,16 @@ SellOffer.attachSchema(new SimpleSchema({
             group: selloffer,
             placeholder: "Expiration Date"
         }
+    },
+
+    email: {
+        label: "UHID",
+        type: String,
+        optional: false,
+        max: 20,
+        autoform: {
+            group: selloffer,
+            palceholder: "UHID"
+        }
     }
 }));
