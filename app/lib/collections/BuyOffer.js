@@ -5,6 +5,7 @@ BuyOffer = new Mongo.Collection(buyoffer);
 
 Meteor.methods({
     addBuyOffer: function(doc) {
+        doc.creator = Meteor.user().profile.name;
         check(doc, BuyOffer.simpleSchema());
         BuyOffer.insert(doc);
     },
@@ -27,13 +28,14 @@ BuyOffer.attachSchema(new SimpleSchema({
     book:{
         type: String,
         autoform:{
-            group: buyoffer,
             afFieldInput:{
                 firstOption:"(Select Textbook)"
             },
             options:function(){
                 var books = _.pluck(Textbook.find({},{fields:{'title':1}}).fetch(), 'title');
-                return _.map(books, function(value)
+                var currentSells = SellOffer.find({creator:Meteor.user().profile.name}).map(function(object){return object.title;});
+                var allowedBooks = _.difference(books, currentSells);
+                return allowedBooks.map(function(value)
                 {
                     return {
                         label: value,
@@ -48,7 +50,6 @@ BuyOffer.attachSchema(new SimpleSchema({
         type: Number,
         optional: false,
         autoform: {
-            group: buyoffer,
             placeholder: "Offer"
         }
     },
@@ -58,7 +59,6 @@ BuyOffer.attachSchema(new SimpleSchema({
         allowedValues: ['Excellent', 'Good', 'Fair', 'Poor'],
         optional: false,
         autoform: {
-            group: buyoffer,
             afFieldInput:{
                 firstOption:"(Select Condition)"
             },
@@ -81,8 +81,12 @@ BuyOffer.attachSchema(new SimpleSchema({
         },
         autoform: {
             type: "hidden",
-            group: buyoffer,
             placeholder: "Expiration Date"
         }
+    },
+    creator: {
+        type: String,
+        optional: true
     }
+
 }));
