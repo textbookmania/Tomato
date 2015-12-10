@@ -1,6 +1,4 @@
-
 Template.Matches.helpers({
-
     /**
      * @returns {*} All non-expired matches for current users sell offers.
      */
