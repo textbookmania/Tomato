@@ -43,14 +43,6 @@ Router.route('/help', {
   name: 'Help'
 });
 
-Router.route('/buyOffers',{
-  name: 'BuyOffers'
-});
-
-Router.route('/sellOffers',{
-  name: 'SellOffers'
-});
-
 Router.route('/matches',{
   name: 'Matches'
 });
@@ -63,32 +55,37 @@ Router.route('/viewProfile',{
   name: 'viewProfile'
 });
 
-Router.route('/buyofferList', {
+Router.route('/banUser', {
+  name: 'banUser'
+});
+
+Router.route('/listBuyOffer',{
   name: 'ListBuyOffer'
 });
 
-Router.route('/buyofferAdd', {
+Router.route('/addBuyOffer',{
   name: 'AddBuyOffer'
 });
 
-Router.route('/buyofferEdit/:_id', {
+Router.route('/allBuyOffer',{
+  name: 'AllBuyOffer'
+});
+
+
+Router.route('/listSellOffer',{
+  name: 'ListSellOffer'
+});
+
+Router.route('/addSellOffer',{
+  name: 'AddSellOffer'
+});
+
+Router.route('/listBuyOffer/:_id', {
   name: 'EditBuyOffer',
   data: function() { return BuyOffer.findOne(this.params._id); }
 });
 
-Router.route('/sellofferList', {
-  name: 'ListSellOffer'
-});
-
-Router.route('/sellofferAdd', {
-  name: 'AddSellOffer'
-});
-
-Router.route('/sellofferEdit/:_id', {
+Router.route('/listSellOffer/:_id', {
   name: 'EditSellOffer',
   data: function() { return SellOffer.findOne(this.params._id); }
-});
-
-Router.route('/banUser', {
-  name: 'banUser'
 });
