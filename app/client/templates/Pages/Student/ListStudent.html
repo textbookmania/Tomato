@@ -8,17 +8,19 @@
           {{#each studentList}}
           <div class="img-div" style="background-image: url({{pic}});"></div>
           <h2 style="font-weight: bold">{{first}} {{last}}</h2>
+          <h2 style="font-weight: bold">{{email}}@hawaii.edu</h2>
+          <h2 style="font-weight: bold">{{phone}}</h2>
 
           {{#if afFieldValueIs name="notification1" value="true"}}
-          <span style="font-weight: bold;">Email?: </span> {{notification1}}{{email}} <br>
+          <span style="font-weight: bold;">Email?: </span> <i class="fa fa-users fa-2x"></i>{{notification1}}{{email}} <br>
           {{else}}
-          <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
+          <span style="font-weight: bold;">Email?: </span> <i class="fa fa-phone"></i>{{notification1}} <br>
           {{/if}}
 
           {{#if afFieldValueIs name="notification2" value="true"}}
-          <span style="font-weight: bold;">Call?: </span> {{notification2}}{{phone}} <br>
+          <span style="font-weight: bold;">Call?: </span><i class="fa fa-users fa-2x"></i> {{notification2}}{{phone}} <br>
           {{else}}
-          <span style="font-weight: bold;">call?: </span> {{notification2}} <br>
+          <span style="font-weight: bold;">call?: </span> <i class="fa fa-phone"></i>{{notification2}} <br>
           {{/if}}
           {{/each}}
         </div>
