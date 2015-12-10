@@ -3,13 +3,6 @@ body {
   background: url('/images/fabric_gray.png');
 }
 
-.header-image{
-  background-image: url('/images/textbooksfeature.jpg');
-  background-size: cover;
-  height: 200px;
-  background-size: cover;
-}
-
 button{
   border-radius:80%;
   background-color: tomato;
@@ -39,7 +32,7 @@ div.well.well-lg{
 }
 .navbar{
   border-radius: 0px;
-  padding: 40px;
+  padding: 5px;
   background: url('/images/black.jpg');
   border: none;
   color: tomato;
@@ -48,8 +41,10 @@ div.well.well-lg{
 }
 
 a.navbar-brand{
-  color: tomato;
-  font-size: 50px;
+  background: url('/images/Tomato.svg');
+  background-size: 60px 45px;
+  height: 45px;
+  width: 60px;
 }
 footer{
   background: url('/images/black.jpg');
@@ -122,10 +117,11 @@ th {
   padding-right: 0;
 }
 .col-2-3 {
-  width: 66.66%;
+  padding-left: 50px;
+  width: 98%;
 }
 .col-1-3 {
-  width: 33.33%;
+  width: 2%;
 }
 
 @media (min-width: 979px) {
@@ -140,4 +136,11 @@ th {
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
   background-color:transparent;
+}
+
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
 }

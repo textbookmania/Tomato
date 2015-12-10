@@ -8,7 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'Home'}}">[TBE]</a>
+        <a class="navbar-brand" href="{{pathFor 'Home'}}"></a>
       </div>
       <ul class="collapse navbar-collapse" id="main-nav">
         <ul class="nav navbar-nav navbar-right">
@@ -19,21 +19,20 @@
               <li><a href="{{pathFor 'AddTextbook'}}">Add Textbook</a></li>
               {{/if}}
               <li><a href="{{pathFor 'ListTextbook'}}">List Textbook</a></li>
-
             </ul>
           </li>
           <li class = "dropdown">
             <a class = "dropdown-toggle" data-toggle="dropdown" href="{{pathFor 'ListBuyOffer'}}">Buy Offers<b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="{{pathFor 'AddBuyOffer'}}">Add Buy Offer</a></li>
-              <li><a href="{{pathFor 'ListBuyOffer'}}">Your Buy Offers</a></li>
+              <li><a href="{{pathFor 'ListBuyOffer'}}">List Buy Offers</a></li>
             </ul>
           </li>
           <li class = "dropdown">
             <a class = "dropdown-toggle" data-toggle="dropdown" href="{{pathFor 'ListSellOffer'}}">Sell Offers<b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="{{pathFor 'AddSellOffer'}}">Add Sell Offer</a></li>
-              <li><a href="{{pathFor 'ListSellOffer'}}">Your Sell Offers</a></li>
+              <li><a href="{{pathFor 'ListSellOffer'}}">List Sell Offers</a></li>
             </ul>
           </li>
           <li><a href="{{pathFor 'Matches'}}">Matches</a></li>
