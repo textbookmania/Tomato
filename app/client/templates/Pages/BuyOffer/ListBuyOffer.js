@@ -1,16 +1,19 @@
 Template.ListBuyOffer.helpers({
-    buyOfferList: function () {
-        return BuyOffer.find();
-    }
+  /**
+   * @returns {*} All of the buyOffer documents of current user.
+   */
+  buyOfferList: function () {
+    return BuyOffer.find({ owner: Meteor.user().profile.name });
+  }
 });
 
 Template.ListBuyOffer.events({
-    'click .delete': function (e) {
-        e.preventDefault();
-        if (confirm("Delete this offer?")) {
-            var currentBuyOfferID = this._id;
-            Meteor.call('deleteBuyOffer', currentBuyOfferID);
-            Router.go('ListBuyOffer');
-        }
+  'click .delete': function(e){
+    e.preventDefault();
+    if (confirm("Delete this buy offer??")) {
+      var currentBuyOfferId = this._id;
+      Meteor.call("deleteBuyOffer", currentBuyOfferId);
+      Router.go('ListBuyOffer');
     }
+  }
 });
