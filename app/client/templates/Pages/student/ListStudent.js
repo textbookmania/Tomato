@@ -1,13 +1,10 @@
-/**
- * Created by jtayl_000 on 11/30/2015.
- */
 Template.ListStudent.helpers({
-
-  /**
-   * @returns {*} All of the BuyOffer documents.
-   */
   studentList: function () {
     return Student.find();
+  },
+
+  currentUser: function () {
+    return this._id;
   }
 });
 

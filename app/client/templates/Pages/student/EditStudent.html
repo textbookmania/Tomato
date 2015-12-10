@@ -1,18 +1,44 @@
 <template name="EditStudent">
   {{#IfLoggedIn}}
-  <div class="fill"></div>
-  <div class="well" style="padding-top: 65px">
-    {{> quickForm
-    collection="Student"
-    template="bootstrap3-horizontal"
-    label-class="col-sm-2"
-    input-col-class="col-sm-10"
+  <div class="row box1" style="background-image: url('/images/textbookheader.png'); background-size: cover;">
+    <div class="col-md-6 studentleft">
+      <div class="img-div" style="background-image: url({{pic}});"> </div>
+      <h4 style="text-transform: uppercase; text-align: center; color: black;"><i class="fa fa-user fa-2x"></i> {{email}}</h4>
+      <span style="font-weight: bold;">First Name: </span> {{first}} <br>
+      <span style="font-weight: bold;">Last Name: </span> {{last}} <br>
+      <span style="font-weight: bold;">Phone Number: </span> {{phone}} <br>
+      <span style="font-weight: bold;">Email: </span> {{email}} <br>
 
-    id="EditStudent"
-    type="method-update"
-    meteormethod="editStudent"
-    doc=this
-    buttonContent="Update"}}
+      {{#if afFieldValueIs name="notification1" value="true"}}
+      <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
+      {{else}}
+      <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
+      {{/if}}
+
+      {{#if afFieldValueIs name="notification2" value="true"}}
+      <span style="font-weight: bold;">Call?: </span> {{notification2}}<br>
+      {{else}}
+      <span style="font-weight: bold;">call?: </span> {{notification2}} <br>
+      {{/if}}
+    </div>
+
+    <div class="col-md-6 studentright" style="background-color: white;">
+      <div class="well studentc">
+        <h5 style="font-weight: bold;">Edit Profile</h5>
+        {{#autoForm id="EditStudent" type="method-update" collection="Student"
+        doc=this meteormethod="editStudent" resetOnSuccess=true}}
+        {{> afQuickField name="first"}}
+        {{> afQuickField name="last"}}
+        {{> afQuickField name="phone"}}
+        {{> afQuickField name="pic"}}
+        {{> afQuickField name="notification1"}}
+        {{> afQuickField name="notification2"}}
+        <div class="form">
+          <input type="submit" value="Submit" class="btn btn-primary submit"/>
+        </div>
+        {{/autoForm}}
+      </div>
+    </div>
   </div>
   {{/IfLoggedIn}}
 </template>

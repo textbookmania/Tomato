@@ -4,6 +4,12 @@ Student = new Mongo.Collection(student);
 
 Accounts.onLogin(function () {
 
+  var username = Meteor.user().profile.name;
+
+  if (Meteor.user().profile.name && _.contains(Meteor.settings.admin_users, Meteor.user().profile.name)) {
+    Roles.addUsersToRoles(Meteor.userId(), 'admin');
+  }
+
   if (Meteor.isServer) {
     if (!_.findWhere(Student.find().fetch(), {email: Meteor.user().profile.name})) {
       Student.insert({
@@ -101,7 +107,18 @@ Student.attachSchema(new SimpleSchema({
       palceholder: "Pic URL"
     }
   },
-  notif: {
+  phone: {
+    label: "Phone #",
+    type: String,
+    optional: true,
+    max: 20,
+    autoform: {
+      group: student,
+      palceholder: "Phone #"
+    }
+  },
+
+  notification1: {
     label: "Email Notifications",
     type: Boolean,
     optional: true,
@@ -109,6 +126,17 @@ Student.attachSchema(new SimpleSchema({
     autoform: {
       group: student,
       placeholder: "Email Notifications"
+    }
+  },
+
+  notification2: {
+    label: "Call Me",
+    type: Boolean,
+    optional: true,
+    max: 20,
+    autoform: {
+      group: student,
+      placeholder: "Call Me"
     }
   }
 }));

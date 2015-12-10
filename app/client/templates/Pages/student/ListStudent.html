@@ -1,28 +1,31 @@
 <template name="ListStudent">
   {{#IfLoggedIn}}
-  <div class="well bumper">
 
-    <table class="table table-striped table-bordered">
-      <thead>
-      <tr>
-        <th>First</th>
-        <th>Last</th>
-        <th>Email</th>
-      </tr>
-      </thead>
+  <div class="container-fluid">
+    <div class="studentmiddle">
+      <div class="well studentc">
+        <div class="row">
+          {{#each studentList}}
+          <div class="img-div" style="background-image: url({{pic}});"></div>
+          <h2 style="font-weight: bold">{{first}} {{last}}</h2>
+          <h2 style="font-weight: bold">{{email}}@hawaii.edu</h2>
+          <h2 style="font-weight: bold">{{phone}}</h2>
 
-      <tbody>
-      {{#each studentList}}
-      <tr>
-        <td>{{first}}</td>
-        <td>{{last}}</td>
-        <td>{{email}}</td>
-        <td><a class="deletestudent" href="#">Delete</a></td>
-      </tr>
-      {{/each}}
-      </tbody>
-    </table>
+          {{#if afFieldValueIs name="notification1" value="true"}}
+          <span style="font-weight: bold;">Email?: </span> <i class="fa fa-users fa-2x"></i>{{notification1}}{{email}} <br>
+          {{else}}
+          <span style="font-weight: bold;">Email?: </span> <i class="fa fa-phone"></i>{{notification1}} <br>
+          {{/if}}
 
+          {{#if afFieldValueIs name="notification2" value="true"}}
+          <span style="font-weight: bold;">Call?: </span><i class="fa fa-users fa-2x"></i> {{notification2}}{{phone}} <br>
+          {{else}}
+          <span style="font-weight: bold;">call?: </span> <i class="fa fa-phone"></i>{{notification2}} <br>
+          {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
   </div>
   {{/IfLoggedIn}}
 </template>
