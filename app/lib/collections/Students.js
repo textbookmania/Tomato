@@ -101,7 +101,6 @@ Student.attachSchema(new SimpleSchema({
     label: "Pic URL",
     type: String,
     optional: true,
-    max: 120,
     autoform: {
       group: student,
       palceholder: "Pic URL"
