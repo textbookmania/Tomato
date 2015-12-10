@@ -3,11 +3,13 @@
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ currentUser.profile.name }}<b class="caret"></b></a>
         <ul class="dropdown-menu" role="menu">
-            <li><a href="{{pathFor 'viewProfile'}}">View Profile</a></li>
+            <li><a href="{{ pathFor 'ListStudent' }}"><i class="fa fa-user"></i> View Profile</a></li>
             {{#if isInRole 'admin'}}
-            <li><a href="{{pathFor 'banUser'}}">Ban User</a></li>
+            <li><a href="{{pathFor 'EditStudent'}}"><i class="fa fa-cogs"></i> Edit Profile</a></li>
+            <li><a href="{{pathFor 'AddStudent'}}"><i class="fa fa-user-plus"></i> Add Student</a></li>
+            <li><a href="{{pathFor 'banUser'}}"><i class="fa fa-user-times"></i> Ban User</a></li>
             {{/if}}
-            <li><a style="text-align: left" href="#" class="btn cas-logout">Logout</a></li>
+            <li><a style="text-align: left" href="#" class="btn cas-logout"><i class="fa fa-sign-out"></i> Logout</a></li>
         </ul>
     </li>
 

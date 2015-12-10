@@ -28,8 +28,10 @@ div.well.well-lg{
 }
 .well-lg{
   padding: 15px;
-
 }
+
+
+
 .navbar{
   border-radius: 0px;
   padding: 5px;
@@ -143,4 +145,109 @@ h1{
 }
 h2{
   text-align: center;
+}
+
+.well{
+  text-align: center;
+}
+
+.btn-primary{
+  color: black;
+  background-color: tomato;
+  border-color: tomato;
+}
+
+.btn{
+  margin-bottom: 10px;
+}
+
+.studentc {
+  border: none;
+  box-shadow: none;
+}
+
+.studentleft {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.studentmiddle{
+  border-top: solid 8px tomato;
+  border-bottom: solid 8px tomato;
+  border: solid 8px tomato;
+  margin: 180px;
+  position: static;
+}
+
+.row{
+  text-align: center;
+}
+
+.studentright {
+  border-top: solid 8px tomato;
+  border-bottom: solid 8px tomato;
+  border: solid 8px tomato;
+  margin: 180px 0 0 0;
+  position: static;
+}
+
+div.row.box1{
+  background-image: url('/images/fabric_gray.png');
+}
+
+.well.studentc{
+  padding: 20px;
+  margin: 10px;
+  text-align: left;
+}
+
+.row.box1 {
+  margin-bottom: 100px;
+}
+
+.col-md-6.studentright{
+  margin-top: 10px;
+}
+
+.col-md-6.studentleft{
+  padding-top: 80px;
+}
+
+h4 {
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h5{
+  text-align: center;
+  font-size: 50px;
+}
+
+div.img-div {
+  /* make it responsive */
+  max-width: 100%;
+  width: 30%;
+  height: 100%;
+  display:block;
+  /* div height to be the same as width*/
+  padding-top: 30%;
+
+  /* make it a cirkle */
+  border-radius: 50%;
+
+  /* Centering on image`s center*/
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+
+  /* it makes the clue thing, takes smaller dimention to fill div */
+  background-size: cover;
+
+  /* it is optional, for making this div centered in parent*/
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
