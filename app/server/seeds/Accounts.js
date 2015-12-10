@@ -1,4 +1,4 @@
-console.log(Meteor.users.find().fetch());
+//console.log(Meteor.users.find().fetch());
 
 /*Validate username, sending a specific error message on failure.
  If profile is not on list of allowed users, will prevent login

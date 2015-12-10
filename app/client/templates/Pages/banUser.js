@@ -1,44 +1,39 @@
 /**
  * Created by mike on 12/5/2015.
  */
-/*
-Banned = new Mongo.Collection(Banned);
-// Publish the entire Collection.  Subscription performed in the router.
-if (Meteor.isServer) {
-  Meteor.publish(Banned, function () {
-    return Banned.find();
-  });}
-//}
 
-AutoForm.hooks({
-  BanUserForm: {
-
-    onSuccess: function (formType, result) {
-      Router.go('Home');
-    }
-  }
-});*/
 Template.banUser.events({
 
   'submit form': function (e) {
     e.preventDefault();
 
-    var username = event.target.text.value;
-
-    Banned.insert({
-    text: text
-  })
-    //   Meteor.users.update({_id: Meteor.userId()}, {$set: {"profile.profileImage": $(e.target).find('[id=ban]').val()}});
-
-    //  var username = Meteor.user().profile.name;
+    var username = $(e.target).find('[id=banuser]').val();
 
     if (username && _.contains(Meteor.settings.adminUsers, username)) {
       Roles.addUsersToRoles(Meteor.userId(), 'banned');
     }
 
-  //  Banned.insert(username);
-    console.log("*********ADDED: ");
+    //  Banned.insert(username);
+    console.log("*********: ");
     console.log(username);
+    console.log("*********: ");
+
+    console.log(Meteor.users.find().fetch());
+    console.log("*****users****: ");
+    console.log(Meteor.users);
+    console.log("*****users.find****: ");
+
+    console.log(Meteor.users.find({"profile.name" : username}));
+ //   if (Meteor.users.find().profile.name == username)
+      //console.log(Meteor.userId());
+    console.log("*********: ");
+    console.log("*********: ");
+
+    var id = Meteor.users.find({"profile.name" : username});
+    if(Meteor.users.find({"profile.name" : username}))
+      console.log(this.userId);
+
+    console.log(_.pluck(id, 'userID'));
     Router.go('Home');
 
   }
