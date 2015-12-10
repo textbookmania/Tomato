@@ -7,7 +7,7 @@ Template.Matches.helpers({
         var buyOfferCursor =[];
         var mySellOffer = SellOffer.find({ owner: Meteor.user().profile.name }).fetch();
         _.each(mySellOffer, function(rec) {
-            buyOfferCursor = buyOfferCursor.concat(BuyOffer.find({book: rec.book}));
+            buyOfferCursor = buyOfferCursor.concat(BuyOffer.find({isbn: rec.isbn}));
         });
         _.each(buyOfferCursor, function(curse) {
             curse.forEach(function (offer) {
@@ -27,7 +27,7 @@ Template.Matches.helpers({
         var sellOfferCursor =[];
         var myBuyOffer = BuyOffer.find({owner: Meteor.user().profile.name}).fetch();
         _.each(myBuyOffer, function(record){
-            sellOfferCursor = sellOfferCursor.concat(SellOffer.find({book: record.book}));
+            sellOfferCursor = sellOfferCursor.concat(SellOffer.find({isbn: record.isbn}));
         });
         _.each(sellOfferCursor, function(curse) {
             curse.forEach(function (offer) {
