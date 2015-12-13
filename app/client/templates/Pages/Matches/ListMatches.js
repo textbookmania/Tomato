@@ -9,20 +9,11 @@ Template.ListMatches.helpers({
 });
 
 Template.ListMatches().events({
-  'click .delete1': function (e) {
+  'click .delete': function(e){
     e.preventDefault();
-    if (confirm("Delete this offer?")) {
-      var currentSellOfferID = this._id;
-      Meteor.call('deleteSellOffer', currentSellOfferID);
-      Router.go('ListSellOffer');
-    }
-  },
-
-  'click .delete2': function (e) {
-    e.preventDefault();
-    if (confirm("Delete this offer?")) {
-      var currentSellOfferID = this._id;
-      Meteor.call('deleteSellOffer', currentSellOfferID);
+    if (confirm("Delete this sell offer??")) {
+      var currentSellOfferId = this._id;
+      Meteor.call("deleteSellOffer", currentSellOfferId);
       Router.go('ListSellOffer');
     }
   }

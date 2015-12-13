@@ -18,6 +18,7 @@
         <th>Expiration</th>
         <th>Creator</th>
         <th>Edit</th>
+        <th>Delete</th>
       </tr>
       </thead>
 
@@ -30,6 +31,7 @@
         <td>{{expires}}</td>
         <td>{{owner}}</td>
         <td><a href="{{pathFor 'EditBuyOffer'}}">Edit</a></td>
+        <td><a class="delete" href="#">Delete</a></td>
       </tr>
       {{/each}}
       </tbody>
@@ -54,6 +56,7 @@
         <th>Expiration</th>
         <th>Creator</th>
         <th>Edit</th>
+        <th>Delete</th>
       </tr>
       </thead>
 
@@ -66,6 +69,7 @@
         <td>{{expires}}</td>
         <td>{{owner}}</td>
         <td><a href="{{pathFor 'EditSellOffer'}}">Edit</a></td>
+        <td><a class="delete" href="#">Delete</a></td>
       </tr>
       {{/each}}
       </tbody>
