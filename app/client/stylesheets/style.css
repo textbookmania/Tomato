@@ -30,7 +30,11 @@ div.well.well-lg{
   padding: 15px;
 }
 
-
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 .navbar{
   border-radius: 0px;
@@ -39,7 +43,6 @@ div.well.well-lg{
   border: none;
   color: tomato;
   font-size: 20px;
-
 }
 
 a.navbar-brand{
