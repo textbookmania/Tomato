@@ -1,6 +1,5 @@
 Template.carousel.rendered = function() {
-  $("#owl-demo").owlCarousel({
-
+  $("#owl-home").owlCarousel({
     navigation : true, // Show next and prev buttons
     slideSpeed : 1000,
     paginationSpeed : 400,
