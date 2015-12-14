@@ -30,7 +30,7 @@ div.well.well-lg{
   padding: 15px;
 }
 
-#owl-demo .item img{
+#owl-home .item img{
   display: block;
   width: 100%;
   height: auto;
@@ -121,13 +121,7 @@ th {
 [class*='col-']:last-of-type {
   padding-right: 0;
 }
-.col-2-3 {
-  padding-left: 50px;
-  width: 98%;
-}
-.col-1-3 {
-  width: 2%;
-}
+
 
 @media (min-width: 979px) {
   ul.nav li.dropdown:hover > ul.dropdown-menu {

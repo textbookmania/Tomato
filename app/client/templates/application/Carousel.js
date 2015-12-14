@@ -7,7 +7,7 @@ Template.carousel.rendered = function() {
     rewindNav : true,
     autoplay : 2500,
     items : 1,
-    loop: true
-
+    loop: true,
+    center: true
   });
 };
