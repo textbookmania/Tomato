@@ -8,7 +8,7 @@ Template.ListMatches.helpers({
   }
 });
 
-Template.ListMatches().events({
+Template.ListMatches.events({
   'click .delete1': function (e) {
     e.preventDefault();
     if (confirm("Delete this offer?")) {
