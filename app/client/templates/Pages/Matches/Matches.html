@@ -1,4 +1,5 @@
 <template name="Matches">
+    {{#IfLoggedIn}}
     <div class="well">
         <div class="offersHeader">
             <h1>Matches</h1>
@@ -35,4 +36,5 @@
             </thead>
         </table>
     </div>
+    {{/IfLoggedIn}}
 </template>

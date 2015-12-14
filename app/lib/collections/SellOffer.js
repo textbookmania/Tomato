@@ -74,11 +74,11 @@ SellOffer.attachSchema(new SimpleSchema({
   condition: {
     label: "Condition",
     type: String,
-    allowedValues: ['excellent', 'good', 'fair', 'poor'],
+    allowedValues: ['Excellent', 'Good', 'Fair', 'Poor', 'Don\'t care'],
     optional: false,
     autoform: {
       group: sellOffer,
-      placeholder: "excellent, good, fair, or poor"
+      placeholder: "Excellent, Good, Fair, Poor, or Don\'t care"
     }
   },
   offer: {
