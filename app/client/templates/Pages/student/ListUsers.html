@@ -1,0 +1,36 @@
+<template name="ListUsers">
+  <h1>Users</h1>
+  {{#IfLoggedIn}}
+  <div class="well">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Picture</th>
+        <th>First</th>
+        <th>Last</th>
+        <th>Email</th>
+        {{#if isInRole}}
+        <th>Delete</th>
+        {{/if}}
+
+      </tr>
+      </thead>
+
+      <tbody>
+      {{#each studentList}}
+      <tr>
+        <div class="img-div" style="background-image: url({{pic}});"></div>
+        <td>{{first}}</td>
+        <td>{{last}}</td>
+        <td>{{email}}@hawaii.edu</td>
+        {{#if isInRole 'admin'}}
+        <td><a class="delete" href="#">Delete</a></td>
+        {{/if}}
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  {{/IfLoggedIn}}
+</template>

@@ -1,10 +1,10 @@
-<template name="ListMatches">
-  <h1> My Matches </h1>
+<template name="ListBooks">
+  <h1> My Books</h1>
   {{#IfLoggedIn}}
   <div class="well">
     <div class="row">
       <div class="col-sm-10">
-        <h1>These User(s) have what you're looking for!!!</h1>
+        <h1>Buy Offers</h1>
       </div>
     </div>
     <table class="table table-striped table-bordered">
@@ -14,7 +14,6 @@
         <th>Condition</th>
         <th>Offer</th>
         <th>Expiration</th>
-        <th>Seller</th>
       </tr>
       </thead>
 
@@ -25,7 +24,6 @@
         <td>{{condition}}</td>
         <td>{{offer}}</td>
         <td>{{expires}}</td>
-        <td><a class="contact" href="#">{{owner}}</a></td>
       </tr>
       {{/each}}
       </tbody>
@@ -35,7 +33,7 @@
   <div class="well">
     <div class="row">
       <div class="col-sm-10">
-        <h1>These User(s) want what you're selling!!!</h1>
+        <h1>Sell Offers</h1>
       </div>
     </div>
     <table class="table table-striped table-bordered">
@@ -45,7 +43,6 @@
         <th>Condition</th>
         <th>Offer</th>
         <th>Expiration</th>
-        <th>Buyer</th>
       </tr>
       </thead>
 
@@ -56,7 +53,6 @@
         <td>{{condition}}</td>
         <td>{{offer}}</td>
         <td>{{expires}}</td>
-        <td><a class="accept" href="#">{{owner}}</a></td>
       </tr>
       {{/each}}
       </tbody>

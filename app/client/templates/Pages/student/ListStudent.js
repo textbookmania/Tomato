@@ -4,7 +4,7 @@ Template.ListStudent.helpers({
   },
 
   currentUser: function () {
-    return this._id;
+    return Student.find({email: Meteor.user().profile.name}); ;
   }
 });
 
