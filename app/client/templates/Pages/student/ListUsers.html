@@ -10,7 +10,6 @@
         <th>Last</th>
         <th>Email</th>
         {{#if isInRole}}
-        <th>Edit</th>
         <th>Delete</th>
         {{/if}}
 
@@ -25,7 +24,6 @@
         <td>{{last}}</td>
         <td>{{email}}@hawaii.edu</td>
         {{#if isInRole 'admin'}}
-        <td><a href="{{pathFor 'EditStudent'}}">Edit</a></td>
         <td><a class="delete" href="#">Delete</a></td>
         {{/if}}
       </tr>

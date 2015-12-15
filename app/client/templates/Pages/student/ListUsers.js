@@ -1,20 +1,17 @@
 Template.ListUsers.helpers({
-
-  /**
-   * @returns {*} All of the Student documents.
-   */
   studentList: function () {
-    return Meteor.users().find();
-  }
+    return Student.find();
+  },
 });
 
-Template.ListStudent.events({
-  'click .delete': function(e){
+Template.ListUsers.events({
+  'click .delete': function(e) {
     e.preventDefault();
-    if (confirm("Delete this student??")) {
-      var currentStudentId = this._id;
-      Meteor.call("deleteStudent", this, currentStudentId);
-      Router.go('ListStudent');
+
+    if (confirm("Delete this student?")) {
+      var currentPostId = this._id;
+      Meteor.call("deleteStudent", currentPostId);
+      Router.go('ListUsers');
     }
   }
 });
