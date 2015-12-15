@@ -1,5 +1,9 @@
 <template name="Home">
+  {{#if isInRole 'banned'}}
+  <h1>You have been banned from further using this site!</h1>
+  {{else}}
   <div>
     {{> carousel}}
   </div>
+  {{/if}}
 </template>

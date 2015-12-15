@@ -112,3 +112,7 @@ Router.route('/listSellOffer/:_id', {
   name: 'EditSellOffer',
   data: function() { return SellOffer.findOne(this.params._id); }
 });
+
+Router.route('/banned',{
+  name: 'banned'
+});
