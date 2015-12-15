@@ -1,28 +1,7 @@
 <template name="EditStudent">
   {{#IfLoggedIn}}
-  <div class="row box1" style="background-image: url('/images/textbookheader.png'); background-size: cover;">
-    <div class="col-md-6 studentleft">
-      <div class="img-div" style="background-image: url({{pic}});"> </div>
-      <h4 style="text-transform: uppercase; text-align: center; color: black;"><i class="fa fa-user fa-2x"></i> {{email}}</h4>
-      <span style="font-weight: bold;">First Name: </span> {{first}} <br>
-      <span style="font-weight: bold;">Last Name: </span> {{last}} <br>
-      <span style="font-weight: bold;">Phone Number: </span> {{phone}} <br>
-      <span style="font-weight: bold;">Email: </span> {{email}} <br>
-
-      {{#if afFieldValueIs name="notification1" value="true"}}
-      <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
-      {{else}}
-      <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
-      {{/if}}
-
-      {{#if afFieldValueIs name="notification2" value="true"}}
-      <span style="font-weight: bold;">Call?: </span> {{notification2}}<br>
-      {{else}}
-      <span style="font-weight: bold;">call?: </span> {{notification2}} <br>
-      {{/if}}
-    </div>
-
-    <div class="col-md-6 studentright" style="background-color: white;">
+  <div class="row box1" style="background-size: cover;">
+    <div class="studentright" style="background-color: white;">
       <div class="well studentc">
         <h5 style="font-weight: bold;">Edit Profile</h5>
         {{#autoForm id="EditStudent" type="method-update" collection="Student"
@@ -37,6 +16,32 @@
           <input type="submit" value="Submit" class="btn btn-primary submit"/>
         </div>
         {{/autoForm}}
+
+        <button data-toggle="collapse" data-target="#viewProfile">View Profile</button>
+        <div id="viewProfile" class="collapse">
+          <div class="studentleft">
+            <div class="img-div" style="background-image: url({{pic}});"></div>
+            <h4 style="text-transform: uppercase; text-align: center; color: black;"><i class="fa fa-user fa-2x"></i>
+              {{email}}</h4>
+            <span style="font-weight: bold;">First Name: </span> {{first}} <br>
+            <span style="font-weight: bold;">Last Name: </span> {{last}} <br>
+            <span style="font-weight: bold;">Phone Number: </span> {{phone}} <br>
+            <span style="font-weight: bold;">Email: </span> {{email}} <br>
+
+            {{#if afFieldValueIs name="notification1" value="true"}}
+            <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
+            {{else}}
+            <span style="font-weight: bold;">Email?: </span> {{notification1}} <br>
+            {{/if}}
+
+            {{#if afFieldValueIs name="notification2" value="true"}}
+            <span style="font-weight: bold;">Call?: </span> {{notification2}}<br>
+            {{else}}
+            <span style="font-weight: bold;">call?: </span> {{notification2}} <br>
+            {{/if}}
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
