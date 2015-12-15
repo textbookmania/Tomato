@@ -60,6 +60,10 @@ Router.route('/listmatches',{
   name: 'ListMatches'
 });
 
+Router.route('/listbooks',{
+  name: 'ListBooks'
+});
+
 Router.route('/liststudent', {
   name: 'ListStudent'
 });
