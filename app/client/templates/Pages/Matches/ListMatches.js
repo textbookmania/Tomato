@@ -1,53 +1,67 @@
 Template.ListMatches.helpers({
 
-  /**
-   * @returns {*} All non-expired matches for current users sell offers.
-   */
   sellOfferList: function () {
-    var sellOfferMatches=[];
-    var buyOfferCursor =[];
-    var mySellOffer = [];
+    var sellOfferMatches = [];
+    var mySellOffers = SellOffer.find({owner: Meteor.user().profile.name});
+    var allBuys = BuyOffer.find();
+
+
+
+
+
+    /*
     var mySellOfferCurse = SellOffer.find({ owner: Meteor.user().profile.name });
+
     mySellOfferCurse.forEach(function(foo){
       if (moment(foo.expires).isAfter()) {
-        mySellOffer=mySellOffer.concat(foo);
+        mySellOffer = mySellOffer.concat(foo);
       }
     });
+
     _.each(mySellOffer, function(rec) {
-      buyOfferCursor = buyOfferCursor.concat(BuyOffer.find({owner: rec.isbn}));
+      buyOfferCursor = buyOfferCursor.concat(BuyOffer.find({owner: rec.book}));
     });
+
     _.each(buyOfferCursor, function(curse) {
       curse.forEach(function (offer) {
         if (moment(offer.expires).isAfter()) {
           sellOfferMatches = sellOfferMatches.concat(offer);
         }
       });
-    });
-    return sellOfferMatches;
+    });*/
+    return mySellOffers;
+  },
+
+  fullList: function () {
+    var allBuys = BuyOffer.find();
+    return allBuys
   },
 
   /**
    * @returns {*} All non-expired matches for current users buy offers.
    */
   buyOfferList: function () {
-    var buyOfferMatches=[];
-    var sellOfferCursor =[];
+    var buyOfferMatches = [];
+    var sellOfferCursor = [];
     var myBuyOffer = [];
     var myBuyOfferCurse = BuyOffer.find({owner: Meteor.user().profile.name});
-    myBuyOfferCurse.forEach(function (foo){
-      myBuyOffer=myBuyOffer.concat(foo);
 
+
+    //for each does the same thing for each element in array
+    myBuyOfferCurse.forEach(function (foo){
+      myBuyOffer = myBuyOffer.concat(foo);
     });
-    _.each(myBuyOffer, function(record){
-      sellOfferCursor = sellOfferCursor.concat(SellOffer.find({owner: record.isbn}));
+
+       _.each(myBuyOffer, function(record){
+      sellOfferCursor = sellOfferCursor.concat(SellOffer.find({book: record.book}));
     });
+
     _.each(sellOfferCursor, function(curse) {
       curse.forEach(function (offer) {
-        if (!moment(offer.expires).isAfter() && offer.buyer) {
           buyOfferMatches = buyOfferMatches.concat(offer);
-        }
       });
     });
+
     return buyOfferMatches;
   }
 });
