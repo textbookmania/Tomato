@@ -3,7 +3,9 @@
  */
 
 Meteor.subscribe("bannedUsers");
-
+/*
+submit button for ban user. take value from html and adds name to banned user collection
+ */
 Template.banUser.events({
 
   'submit form': function (e) {
