@@ -9,7 +9,7 @@ Meteor.methods({
    */
   addBuyOffer: function(doc) {
     textList=Textbook.find().fetch();
-    doc.expires=moment().add(7, 'days').format();
+    doc.expires=moment().add(7, 'days').format("MMMM Do YYYY, h:mm:ss a");
     doc.owner = Meteor.user().profile.name;
     //stop duplicate offers from same user
     if (_.findWhere(BuyOffer.find().fetch(), {owner: doc.owner, book: doc.book}) || _.findWhere(SellOffer.find().fetch(), {owner: doc.owner, book: doc.book}) ) {
@@ -30,7 +30,7 @@ Meteor.methods({
   editBuyOffer: function(doc, docID) {
     check(doc, BuyOffer.simpleSchema());
     BuyOffer.update({_id: docID}, doc);
-    BuyOffer.update({_id: docID}, {$set:{expires: moment().add(7, 'days').format()}});
+    BuyOffer.update({_id: docID}, {$set:{expires: moment().add(7, 'days').format("MMMM Do YYYY, h:mm:ss a")}});
   },
 
   deleteBuyOffer: function(docID){
@@ -44,7 +44,6 @@ if (Meteor.isServer) {
     return BuyOffer.find();
   });
 }
-
 
 /**
  * Create the schema for BuyOffer
