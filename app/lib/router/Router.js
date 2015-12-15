@@ -120,3 +120,7 @@ Router.route('/banned',{
 Router.route('/listbooks',{
   name: 'ListBooks'
 });
+
+Router.route('/listall',{
+  name: 'ListAll'
+});
