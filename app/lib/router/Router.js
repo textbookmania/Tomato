@@ -120,3 +120,7 @@ Router.route('/listSellOffer/:_id', {
 Router.route('/banned',{
   name: 'banned'
 });
+
+Router.route('/listusers',{
+  name: 'ListUsers'
+});

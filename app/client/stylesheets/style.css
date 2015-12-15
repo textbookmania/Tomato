@@ -248,7 +248,7 @@ div.img-div {
 
   /* it is optional, for making this div centered in parent*/
   margin: 0 auto;
-  top: 0;
+  top: 5;
   left: 0;
   right: 0;
   bottom: 0;
