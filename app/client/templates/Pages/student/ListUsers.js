@@ -4,7 +4,7 @@ Template.ListUsers.helpers({
    * @returns {*} All of the Student documents.
    */
   studentList: function () {
-    return Student.find();
+    return Meteor.users().find();
   }
 });
 
